@@ -4,6 +4,7 @@
 //Ci sono diverse domande con relative risposte.
 //Gestire il “Database” e la visualizzazione di queste domande e risposte con PHP.
 
+//importo i dati e creo l'array
 $questionAnswer=[
 [
     'question'=>'How are you implementing the recent Court of Justice of the European Union (CJEU) decision on the right to be forgotten?',
@@ -62,7 +63,9 @@ $questionAnswer=[
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link css-->
     <link rel="stylesheet" href="css/style.css">
+     <!--link fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -88,7 +91,7 @@ $questionAnswer=[
                   <a href="#">Technologies</a> 
                   </li>
                   <li >
-                    <a class="active" href="#">FAQ</a>
+                    <a class="active"  href="#">FAQ</a>
                   </li>
               </ul>
           </div>
@@ -99,19 +102,21 @@ $questionAnswer=[
         </div>
     </div>
     <hr>
-
     <main class="container">
-    <?php foreach($questionAnswer as $note => $point){ 
-        //var_dump($note);?>
-        <div class="template">
-            <h2><?php echo $point['question'];
-            //var_dump($point['question']);?>
-            </h2>
-            <p><?php echo $point['answer'];?></p>
-        </div>
-    <?php }?>
+        <!--Imposto il foreach per arrivare all'elemento 
+        per la stampa della domanda e della risposta
+        -->
+        <?php foreach($questionAnswer as $note => $point){ 
+            //var_dump($note);?>
+            <div class="template">
+                <!--Echo adesso può stampare perchè la variabile non è un array-->
+                <h2><?php echo $point['question'];
+                //var_dump($point['question']);?>
+                </h2>
+                <p><?php echo $point['answer'];?></p>
+            </div>
+        <?php }?>
     </main>
-
     <footer>
         <div class="containerFooter">
             <div>
