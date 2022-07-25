@@ -7,7 +7,7 @@
 $questionAnswer=[
 [
     'question'=>'How are you implementing the recent Court of Justice of the European Union (CJEU) decision on the right to be forgotten?',
-    'answer'=> 'The recent ruling by the Court of Justice of the European Union has profound consequences for search engines in Europe. The court found that certain users have the right to ask search engines like Google to remove results for queries that include the person\'s name. To qualify, the results shown would need to be inadequate, irrelevant, no longer relevant, or excessive. 
+    'answer'=> 'The recent  <a href="#"> ruling by the Court of Justice of the European Union </a>has profound consequences for search engines in Europe. The court found that certain users have the right to ask search engines like Google to remove results for queries that include the person\'s name. To qualify, the results shown would need to be inadequate, irrelevant, no longer relevant, or excessive. 
                 Since this ruling was published on 13 May 2014, we\'ve been working round the clock to comply. This is a complicated process because we need to assess each individual request and balance the rights of the individual to control his or her personal data with public\'s right to know and distribute information.
                 If you have a removal request, please fill out this webform. You\'ll receive an automatic reply confirming that we have received your request. We will then assess your case—please note this may take some time because we have already received many such requests. In evaluating your request, we will look at whether the results include outdated information about your private life. We\'ll also look at whether there\'s a public interest in the information remaining in our search results—for example, if it relates to financial scams, professional malpractice, criminal convictions or your public conduct as a government official (elected or unelected). These are difficult judgements and as a private organization, we may not be in a good position to decide on your case. If you disagree with our decision you can contact your local DPA.
                 We look forward to working closely with data protection authorities and others over the coming months as we refine our approach. The CJEU\'s ruling constitutes a significant change for search engines. While we are concerned about its impact, we also believe it\'s important to respect the Court\'s judgment and are working hard to devise a process that complies with the law.
@@ -76,19 +76,19 @@ $questionAnswer=[
           <div>
               <ul>
                   <li>
-                  Overview
+                  <a href="#">Overview</a> 
                   </li>
                   <li>
-                  Privacy Policy
+                  <a href="#"> Privacy Policy</a>
                   </li>
                   <li>
-                  Terms of Service
+                  <a href="#"> Terms of Service</a>
                   </li>
                   <li>
-                  Technologies
+                  <a href="#">Technologies</a> 
                   </li>
-                  <li>
-                  FAQ
+                  <li >
+                    <a class="active" href="#">FAQ</a>
                   </li>
               </ul>
           </div>
@@ -103,7 +103,7 @@ $questionAnswer=[
     <main class="container">
     <?php foreach($questionAnswer as $note => $point){ 
         //var_dump($note);?>
-        <div>
+        <div class="template">
             <h2><?php echo $point['question'];
             //var_dump($point['question']);?>
             </h2>
@@ -113,8 +113,31 @@ $questionAnswer=[
     </main>
 
     <footer>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nobis minus eos eligendi dicta dolores voluptatem dolorem quo accusamus sapiente, perspiciatis temporibus tempora fugiat aperiam soluta ullam rerum totam possimus?
+        <div class="containerFooter">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">Google</a>
+                    </li>
+                    <li>
+                        <a href="#">About Google</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="selectionLanguage">
+                <i></i>
+                <select name="language" id="">
+                    <option value="en">English</option>
+                    <option value="it">Italy</option>
+                    <option value="sp">Spanish</option>
+                </select>
+            </div>
         </div>
     </footer>
 </body>
